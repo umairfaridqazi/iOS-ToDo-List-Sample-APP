@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Items List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ItemsListViewController" id="BYZ-38-t0r" customClass="ItemsListViewController" customModule="ToDo_CoreData2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21" y="4"/>
+        </scene>
+        <!--Add Item View Controller-->
+        <scene sceneID="aHv-cI-est">
+            <objects>
+                <viewController storyboardIdentifier="AddItemViewController" id="xGc-b8-qty" customClass="AddItemViewController" customModule="ToDo_CoreData2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P9Y-rk-pE3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zML-kf-sGd">
+                                <rect key="frame" x="20" y="79" width="353" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="mhI-qH-TcZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IpT-79-HLP">
+                                <rect key="frame" x="120" y="189" width="153" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ic-Bs-4nY">
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NRa-NJ-le0">
+                                        <rect key="frame" x="104" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11G-UX-1J0">
+                                <rect key="frame" x="50" y="738" width="293" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="aaM-vK-JVq"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save Changes"/>
+                                <connections>
+                                    <action selector="btnAddTapped:" destination="xGc-b8-qty" eventType="touchUpInside" id="aYg-Sh-UbW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="L9n-L7-Yj5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zML-kf-sGd" firstAttribute="top" secondItem="L9n-L7-Yj5" secondAttribute="top" constant="20" id="6Yj-mW-vXP"/>
+                            <constraint firstItem="11G-UX-1J0" firstAttribute="leading" secondItem="L9n-L7-Yj5" secondAttribute="leading" constant="50" id="9MP-3w-qFz"/>
+                            <constraint firstItem="IpT-79-HLP" firstAttribute="centerX" secondItem="P9Y-rk-pE3" secondAttribute="centerX" id="ANs-y0-jME"/>
+                            <constraint firstItem="L9n-L7-Yj5" firstAttribute="trailing" secondItem="11G-UX-1J0" secondAttribute="trailing" constant="50" id="CUJ-rl-CKA"/>
+                            <constraint firstItem="zML-kf-sGd" firstAttribute="leading" secondItem="L9n-L7-Yj5" secondAttribute="leading" constant="20" id="GcA-dQ-bRX"/>
+                            <constraint firstItem="IpT-79-HLP" firstAttribute="top" secondItem="zML-kf-sGd" secondAttribute="bottom" constant="50" id="HfA-lp-IbX"/>
+                            <constraint firstItem="L9n-L7-Yj5" firstAttribute="bottom" secondItem="11G-UX-1J0" secondAttribute="bottom" constant="20" id="WYQ-RE-Qds"/>
+                            <constraint firstItem="L9n-L7-Yj5" firstAttribute="trailing" secondItem="zML-kf-sGd" secondAttribute="trailing" constant="20" id="co7-Ef-Jme"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtName" destination="zML-kf-sGd" id="6LN-EQ-awh"/>
+                        <outlet property="valueSwitch" destination="NRa-NJ-le0" id="56j-g3-FCj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="brR-4O-f02" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-291" y="680"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
